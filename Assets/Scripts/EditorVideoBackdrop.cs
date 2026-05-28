@@ -17,6 +17,11 @@ public sealed class EditorVideoBackdrop : MonoBehaviour
     [Tooltip("Distance from the camera along its forward axis.")]
     float backdropDistance = 8f;
 
+    /// <summary>
+    /// Public read-only accessor for other editor helpers to query the configured backdrop distance.
+    /// </summary>
+    public float PlaneDistanceAlongCameraForward => backdropDistance;
+
     GameObject backdropRoot;
 
     void Awake()
